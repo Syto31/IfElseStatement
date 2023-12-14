@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF Else Statement</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        function NilaiMhs() {
+            var nim = document.getElementById("nim").value;
+            var nama = document.getElementById("nama").value;
+            var kehadiran = parseFloat(document.getElementById("hadir").value);
+            var tugas = parseFloat(document.getElementById("tugas").value);
+            var uts = parseFloat(document.getElementById("uts").value);
+            var uas = parseFloat(document.getElementById("uas").value);
+            var nilai = (kehadiran * 0.1) + (tugas * 0.2) + (uts * 0.35) + (uas * 0.35);
+            var NA = document.getElementById("nilai").value = nilai;
+
+            if (isNaN(NA)) {
+                alert("Input Hasil harus angka");
+                return;
+            }
+            NA = parseFloat(NA);
+            var hasil = "";
+            var grade = "";
+            if (NA >= 85) {
+                document.getElementById("hasil").value = "Lulus";
+                document.getElementById("grade").value = "A";
+
+            }
+            else if (NA >= 75) {
+                document.getElementById("hasil").value = "Lulus";
+                document.getElementById("grade").value = "B";
+
+            }
+            else if (NA >= 65) {
+                document.getElementById("hasil").value = "Lulus";
+                document.getElementById("grade").value = "C";
+
+            }
+            else if (NA >= 55) {
+                document.getElementById("hasil").value = "Tidak Lulus";
+                document.getElementById("grade").value = "D";
+
+            }
+            else if (NA < 55) {
+                document.getElementById("hasil").value = "Tidak Lulus";
+                document.getElementById("grade").value = "E";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="img/SYTO.CO LOGO WARNA.png" class="logo">
+        <h2> Penggunaan Fungsi If Else Java Script</h2>
+        <h2>INPUT</h2>
+        <form>
+            <input type="text" placeholder="NIM" id="nim">
+            <input type="text" placeholder="NAMA" id="nama">
+            <input type="text" placeholder="KEHADIRAN" id="hadir">
+            <input type="text" placeholder="TUGAS" id="tugas">
+            <input type="text" placeholder="UTS" id="uts">
+            <input type="text" placeholder="UAS" id="uas">
+            <h2>OUTPUT</h2>
+            <input type="text" placeholder="NILAI" id="nilai">
+            <input type="text" placeholder="HASIL" id="hasil">
+            <input type="text" placeholder="GRADE" id="grade">
+
+            <input type="button" value="Proses" onclick="NilaiMhs()">
+            <input type="reset" value="Clear">
+        </form>
+        <footer>
+            <p class="copyright">Copyright &copy; 2023 SYTO.CO</p>
+        </footer>
+    </div>
+</body>
+
+</html>

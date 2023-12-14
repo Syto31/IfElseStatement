@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(img/Motion\ Graphics\ GIF\ by\ Matthew\ Butler\ -\ Find\ &\ Share\ on\ GIPHY.gif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    width: 300px;
+    padding: 16px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.h2 {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 6px 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type="button"], input[type="reset"] {
+    background-color: #53a055;
+    color: white;
+    padding: 8px 16px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease 0s;
+}
+
+input[type="button"]:hover, input[type="reset"]:hover {
+    background-color: #047a08;
+    box-shadow: 0px 0px 5px #047a08,
+                0px 0px 30px #047a08,
+                0px 0px 90px #047a08;
+    color: #ffffff;
+}
+
+footer p{
+    font-family: calibri;
+}
+
+.logo{
+    align-items: center;
+    width: 150px;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex: 100%;
+    }
+}
